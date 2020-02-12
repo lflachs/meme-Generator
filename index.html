@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Maker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1 class="main-title">My very own meme generator 👋</h1>
+        <div class="meme-generator">
+            <div class="settings">
+                <form>
+                    <h3>📷 Source Image</h3>
+                    <div class="input-group mb-3">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="inputGroupFile02"
+                                oninput="handleUpload(event)">
+                            <label class="custom-file-label" for="inputGroupFile02"
+                                aria-describedby="inputGroupFileAddon02">Choose file</label>
+                        </div>
+                    </div>
+
+                    <h3>🖌️Choose your text</h3>
+                    <div class="form-group">
+                        <label for="topImage">Top Text</label>
+                        <input type="text" placeholder="Type your text" class="form-control"
+                            oninput="handleInput(event, '.meme-text.top')">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="topImage">Bottom Text</label>
+                        <input type="text" placeholder="Type your text" class="form-control"
+                            oninput="handleInput(event, '.meme-text.bottom')">
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick='handleSave()'>Save my meme</button>
+
+                </form>
+            </div>
+            <div class='meme'>
+                <img class="meme-image" src="http://placekitten.com/300/300" alt=”meme-background” />
+                <p class="meme-text top">Top Text</p>
+                <p class="meme-text bottom">Bottom Text</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
